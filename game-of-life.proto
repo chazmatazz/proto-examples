@@ -1,0 +1,11 @@
+(def game-of-life ()
+  (letfed ((b (once (<= (rnd 0 1) 0.5)) 
+	    (let ((sum (- (sum-hood (nbr b)) b)))
+	      (if b (and (> sum 1) (< sum 4)) (= sum 3)))))
+    (if b (blue 1) (blue 0)))
+  )
+
+;; run with
+;; proto -n 500 -grid -r 8 -sv -l -m -w -s 0.01 "(game-of-life)"
+;; these settings ensure 8-connections
+

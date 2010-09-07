@@ -1,0 +1,8 @@
+(def consensus-demo-1 () 
+  (let ((init (once (rnd 0 50))))
+    (blue (consensus 0.02 init)))
+  )
+  
+;; run with
+;; proto -n 800 -sv -l -m -w "(consensus-demo-1)"
+;; proto -n 4000 -sv -l -m -w "(consensus-demo-1)"

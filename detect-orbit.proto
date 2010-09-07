@@ -1,0 +1,18 @@
+(all
+ ;; the device orbits when you press t
+ (def orbit ()
+   (letfed ((t (once (* (rnd 0 1) 100)) (+ t (dt))))
+     (mov (* (if (is-orange) 1 0) (polar-to-rect (tup 0.25 (/ t 60)))))
+     )
+   )
+ )
+
+(def detect-orbit ()
+  (all
+   (orbit)
+   (let ((o (is-orange)))
+     (if (max-hood+ (nbr o)) 
+       (blue 1) 
+       (blue 0)))
+   )
+  )

@@ -1,0 +1,7 @@
+(all
+ (def consensus (epsilon init)
+  (rep val init
+   (+ val
+    (* epsilon
+     (sum-hood (- (nbr val) val))))))
+)
