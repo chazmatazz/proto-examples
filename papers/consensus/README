@@ -1,0 +1,6 @@
+From Jake Beal's paper on consensus
+
+http://web.mit.edu/jakebeal/www/Publications/AAMAS10-consensus.pdf
+
+The consensus algorithm is from the paper (consensus.proto); the other files are approximations of the experiments that they ran.
+
