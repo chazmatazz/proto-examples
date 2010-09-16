@@ -1,8 +1,9 @@
 (all
  (def fib (n) 
    (if (<= n 1)
-     0
-     (fib (- n 1))
+     1
+     ;; instead of the recursive call, try just returning 2: that runs... 
+     (+ (fib (- n 1)) (fib (- n 2)))
      )
    )
  )
@@ -13,4 +14,4 @@
 
 ;; DOES NOT WORK!!!
 ;; run with
-;; proto -n 5 -sv -l -m -w -s 0.01 "(fib-blue 1)"
+;; proto -n 5 -sv -l -m -w -s 0.01 "(fib-blue 2)"
