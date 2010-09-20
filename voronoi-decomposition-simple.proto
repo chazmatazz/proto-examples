@@ -11,7 +11,7 @@
 ;; to associate with and 
 ;;
 ;; To run:
-;; 1) proto -n 500 -grid -l -T -step "(VoronoiDecomposition_Simple(xxx))" where "xxx" is the
+;; 1) proto -n 500 -grid -l -T -step "(voronoi-decomposition-simple xxx)" where "xxx" is the
 ;;    max distance you want the nodes to associate with a sense
 ;; 2) Pick several devices and set their sense 1, 2 or 3 on ("t", "y" and "u")
 ;; 3) "SHIFT-S" if you want to hide the devices
