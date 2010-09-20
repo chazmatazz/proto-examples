@@ -16,3 +16,6 @@
        (blue 0)))
    )
   )
+
+;; run with
+;; proto -n 500 -sv -l -m -w -s 0.01 "(detect-orbit)"

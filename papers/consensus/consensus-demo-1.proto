@@ -1,8 +1,11 @@
-(def consensus-demo-1 () 
+(def consensus-demo-1 (epsilon) 
   (let ((init (once (rnd 0 50))))
-    (blue (consensus 0.02 init)))
+    (blue (consensus epsilon init)))
   )
   
-;; run with
-;; proto -n 800 -sv -l -m -w "(consensus-demo-1)"
-;; proto -n 4000 -sv -l -m -w "(consensus-demo-1)"
+;; run with (to converge)
+;; proto -n 800 -sv -l -m -w "(consensus-demo-1 0.02)"
+;; proto -n 4000 -sv -l -m -w "(consensus-demo-1 0.02)"
+;; to diverge (probably) run
+;; proto -n 800 -sv -l -m -w "(consensus-demo-1 0.05)"
+;; proto -n 4000 -sv -l -m -w "(consensus-demo-1 0.05)"

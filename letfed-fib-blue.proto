@@ -1,0 +1,19 @@
+(all
+ (def fib-incr (f-vals n)
+   (if (<= (3rd f-vals) n) 
+     (tup (2nd f-vals) (+ (1st f-vals) (2nd f-vals)) (+ 1 (3rd f-vals)))
+     f-vals
+     )
+   )
+ (def letfed-fib (n) 
+   (letfed ((f-vals (tup 1 1 3) (fib-incr f-vals n)))
+     (2nd f-vals)
+     )
+   )
+ )
+(def letfed-fib-blue (n) 
+  (blue (letfed-fib n))
+  )
+
+;; run with
+;; proto -n 5 -sv -l -m -w -s 0.01 "(letfed-fib-blue 3)"

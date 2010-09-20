@@ -3,7 +3,7 @@
    (if (<= n 1)
      1
      ;; instead of the recursive call, try just returning 2: that runs... 
-     (+ (fib (- n 1)) (fib (- n 2)))
+     (+ (fib2 (- n 1)) (fib2 (- n 2)))
      )
    )
  )
